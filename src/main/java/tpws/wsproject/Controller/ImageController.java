@@ -37,7 +37,7 @@ public class ImageController {
         Image last = serv.getLast();
         int nextid = 1;
         if(last!=null){
-            nextid = last.getId+1;
+            nextid = last.getId()+1;
         }
 		Image image = new Image(nextid,idVente,data);
         serv.InsertImage(image);
