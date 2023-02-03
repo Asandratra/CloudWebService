@@ -36,13 +36,13 @@ public class DemandeRechargeController {
         return data;
     }
 
-    @PostMapping("{idutilisateur}")
+    @PostMapping("/{idutilisateur}")
     public DemandeRecharge saveDemandeRecharge(@PathVariable int idutilisateur,@RequestBody DemandeRecharge demanderecharge) {
         service.save(idutilisateur,demanderecharge);
         return demanderecharge;
     }
 
-    @PutMapping("{Id}")
+    @PutMapping("/{Id}")
     public ResponseEntity<DemandeRecharge> UpdateDemandeRecharge(@PathVariable int Id,
             @RequestBody DemandeRecharge av) {
         DemandeRecharge demanderecharge = service.get(Id);
@@ -55,13 +55,13 @@ public class DemandeRechargeController {
         return ResponseEntity.ok(demanderecharge);
     }
 
-    @DeleteMapping("{Id}")
+    @DeleteMapping("/{Id}")
     public ResponseEntity<DemandeRecharge> deleteDemandeRecharge(@PathVariable int Id) {
         service.delete(Id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping("{Id}")
+    @GetMapping("/{Id}")
     public DemandeRecharge findDemandeRecharge(@PathVariable int Id) {
         DemandeRecharge avi = service.get(Id);
 
