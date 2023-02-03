@@ -4,15 +4,11 @@ package tpws.wsproject.Entities;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
 @Document(collection = "Visuel")
 public class Image {
-
-	@Trasient
-	public static final String SEQUENCE_NAME="counters"
 
 	@Id
 	private int id;
@@ -57,10 +53,4 @@ public class Image {
 	public void setData(String data) {
 		this.data = data;
 	}
-	
-	
-	
-	
-	
-	
 }
