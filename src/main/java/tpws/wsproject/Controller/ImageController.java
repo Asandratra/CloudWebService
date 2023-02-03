@@ -34,7 +34,12 @@ public class ImageController {
 	
 	@PostMapping
     public String addImage(@RequestParam("idVente") int idVente, @RequestParam("data") String data) throws IOException {
-		Image image = new Image(idVente,data);
+        Image last = serv.getLast();
+        int nextid = 1;
+        if(last!=null){
+            nextid = last.getId+1;
+        }
+		Image image = new Image(nextid,idVente,data);
         serv.InsertImage(image);
         return "Image added successfully";
     }

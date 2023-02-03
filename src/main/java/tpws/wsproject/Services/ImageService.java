@@ -22,6 +22,11 @@ public class ImageService {
 	public List<Image> getAllByIdVente(int idvente){
 		return repo.findAllByIdVente(idvente);
 	}
+
+	public Image getLast(){
+		List<Image> list = repo.findAll();
+		return (Image) list.get(list.size()-1);
+	}
 	
 	public void InsertImage(Image im) {
 		
