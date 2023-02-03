@@ -23,7 +23,7 @@ public class DemandeRechargeService {
     }
 
     public DemandeRecharge get(int id) {
-        return repo.findById(id).get();
+        return repo.findById(id).get(0);
     }
 
     public void delete(int id) {
