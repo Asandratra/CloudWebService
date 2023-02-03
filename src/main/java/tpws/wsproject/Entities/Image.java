@@ -12,8 +12,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 public class Image {
 
 	@MongoId
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 	
 	private int idVente;
 	
@@ -26,17 +25,17 @@ public class Image {
 		this.data = data;
 	}
 
-	public Image(int id,int idvente, String data) {
+	public Image(Integer id,int idvente, String data) {
 		this.id = id;
 		this.idVente = idvente;
 		this.data = data;
 	}
 	
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 	
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -55,10 +54,5 @@ public class Image {
 	public void setData(String data) {
 		this.data = data;
 	}
-	
-	
-	
-	
-	
 	
 }
