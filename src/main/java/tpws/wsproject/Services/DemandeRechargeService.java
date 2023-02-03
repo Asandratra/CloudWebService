@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import tpws.wsproject.Entities.DemandeRecharge;
 import tpws.wsproject.Repositories.DemandeRechargeRepository;
 import java.util.List;
+import java.sql.Date;
 
 @Service
 public class DemandeRechargeService {
@@ -17,6 +18,7 @@ public class DemandeRechargeService {
 
     public void save(int id,DemandeRecharge demanderecharge) {
     	demanderecharge.setIdUtilisateur(id);
+        demanderecharge.setDaty(new Date(System.currentTimeMillis()));
         repo.save(demanderecharge);
     }
 
