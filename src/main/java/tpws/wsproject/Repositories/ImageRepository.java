@@ -13,8 +13,5 @@ public interface ImageRepository extends org.springframework.data.mongodb.reposi
 	@Query(value="select * from image i where i.idvente= :id",nativeQuery=true)
 	List<Image> findAllByIdVente(@Param("id")int id);
 	
-	@Query(value="select * from image i where i.id in (Select max(id) from image) limit 1",nativeQuery=true)
-	Image findLast();
-	
 }
 

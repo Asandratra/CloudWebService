@@ -23,10 +23,6 @@ public class ImageService {
 		return repo.findAllByIdVente(idvente);
 	}
 	
-	public Image getLast() {
-		return repo.findLast();
-	}
-	
 	public void InsertImage(Image im) {
 		
 		repo.save(im);

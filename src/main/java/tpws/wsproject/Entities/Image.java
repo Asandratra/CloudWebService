@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.mapping.MongoId;
 public class Image {
 
 	@MongoId
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	private int idVente;
