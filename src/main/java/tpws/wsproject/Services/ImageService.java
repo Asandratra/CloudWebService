@@ -25,6 +25,9 @@ public class ImageService {
 
 	public Image getLast(){
 		List<Image> list = repo.findAll();
+		if(list.size()<1){
+			return null;
+		}
 		return (Image) list.get(list.size()-1);
 	}
 	
