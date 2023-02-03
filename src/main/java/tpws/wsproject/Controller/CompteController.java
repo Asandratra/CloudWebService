@@ -20,14 +20,14 @@ public class CompteController {
 	private CompteService serv;
 	
 	@GetMapping("{idutilisateur}")
-	public double getMontant(@PathVariable("idutilisateur") int idutilisateur) {
+	public double getMontant(@PathVariable int idutilisateur) {
 		
 		return serv.getMontant(idutilisateur);
 		
 	}
 	
 	@GetMapping("/find/{idutilisateur}")
-	public Compte getCompteByUser(@PathVariable("idutilisateur") int idutilisateur) {
+	public Compte getCompteByUser(@PathVariable int idutilisateur) {
 		
 	Compte c = serv.getCompte(idutilisateur);
 	return c;
