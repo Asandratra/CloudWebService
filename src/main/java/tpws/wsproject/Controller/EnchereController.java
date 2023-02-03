@@ -25,7 +25,7 @@ public class EnchereController {
 	@Autowired
 	private EnchereService serv;
 	
-	@PostMapping("/{idutilisateur}")
+	@PostMapping("{idutilisateur}")
 	public void saveEnchere(@PathVariable("idutilisateur") int idutilisateur,@RequestBody Enchere e) throws Exception {
 		serv.saveenchere(idutilisateur,e);
 	}

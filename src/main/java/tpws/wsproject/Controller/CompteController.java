@@ -19,7 +19,7 @@ public class CompteController {
 	@Autowired
 	private CompteService serv;
 	
-	@GetMapping("/{idutilisateur}")
+	@GetMapping("{idutilisateur}")
 	public double getMontant(@PathVariable("idutilisateur") int idutilisateur) {
 		
 		return serv.getMontant(idutilisateur);
