@@ -26,7 +26,7 @@ public class EnchereController {
 	private EnchereService serv;
 	
 	@PostMapping("{idutilisateur}")
-	public void saveEnchere(@PathVariable int idutilisateur,@RequestBody Enchere e) throws Exception {
+	public void saveEnchere(@PathVariable("idutilisateur") int idutilisateur,@RequestBody Enchere e) throws Exception {
 		serv.saveenchere(idutilisateur,e);
 	}
 	
@@ -41,7 +41,7 @@ public class EnchereController {
 	}
 	
 	@GetMapping("/getMax/{idvente}")
-	public double getMaxbyidvente(@PathVariable int idvente) {
+	public double getMaxbyidvente(@PathVariable("idvente") int idvente) {
 		double max = serv.getMaxByidvente(idvente);
 		
 		return max;
