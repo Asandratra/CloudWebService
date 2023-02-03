@@ -74,4 +74,8 @@ public class DemandeRecharge {
         return id;
     }
 
+    public DemandeRecharge(int montant){
+        this.montant=montant;
+    }
+
 }
