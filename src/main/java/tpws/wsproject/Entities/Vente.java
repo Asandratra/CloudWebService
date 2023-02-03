@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="vente")
@@ -42,6 +45,8 @@ public class Vente {
 	
 	@Column(name="idcategorie")
 	private int idCategorie;
+	
+
 	
 	public int getId() {
 		return id;

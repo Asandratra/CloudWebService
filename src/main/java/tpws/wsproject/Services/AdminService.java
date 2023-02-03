@@ -1,10 +1,7 @@
 package tpws.wsproject.Services;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import tpws.wsproject.Entities.Admin;
 import tpws.wsproject.Repositories.AdminRepository;
 
